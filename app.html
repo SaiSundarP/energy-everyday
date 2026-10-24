@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bi-monthly EB Bill Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">EB</span><span>Everyday Energy</span></div>
+      <span class="period">BI-MONTHLY ESTIMATE</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Your power, in perspective</p>
+      <h1 id="page-title">Make sense of<br>your energy bill.</h1>
+      <p class="intro-copy">A clear estimate of your electricity energy charges, calculated by consumption slab.</p>
+    </section>
+
+    <section class="calculator" aria-label="Electricity bill calculator">
+      <div class="input-panel">
+        <p class="panel-kicker">Start with your meter reading</p>
+        <label for="units">Units consumed</label>
+        <div class="input-wrap">
+          <input id="units" type="number" min="0" step="1" value="0" inputmode="numeric" aria-describedby="units-help">
+          <span class="unit-label">units</span>
+        </div>
+        <div class="scheme-block" aria-live="polite">
+          <span class="scheme-caption">Applicable tariff</span>
+          <span class="scheme-pill" id="scheme">New scheme</span>
+          <p class="scheme-note" id="units-help">The scheme is selected automatically from your total bi-monthly consumption.</p>
+        </div>
+      </div>
+
+      <div class="result-panel">
+        <div class="result-heading">
+          <div>
+            <h2>Charge breakdown</h2>
+            <p class="result-caption">Progressive rates applied to each band</p>
+          </div>
+        </div>
+        <div class="total-box" aria-live="polite">
+          <span class="total-label">Estimated energy charge</span>
+          <strong id="total">₹0.00</strong>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Consumption band</th><th>Units</th><th>Rate</th><th>Charge</th></tr>
+            </thead>
+            <tbody id="breakdown"></tbody>
+          </table>
+        </div>
+        <p class="footnote">Estimate covers energy charges only. Other fees or adjustments, if applicable, are not included.</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer-copy">© 2026 Everyday Energy <span aria-hidden="true">·</span> Created by Sai Sundar</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
