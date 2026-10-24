@@ -4,7 +4,13 @@ A lightweight, browser-based calculator for estimating bi-monthly electricity en
 
 ## Run locally
 
-Open `app.html` in a modern web browser. The project uses plain HTML, CSS, and JavaScript and does not require a build step or dependencies.
+Open `index.html` in a modern web browser. The project uses plain HTML, CSS, and JavaScript and does not require a build step or dependencies. `app.html` remains available as an alternate local entry point.
+
+## Publish with GitHub Pages
+
+The repository is structured as a static site: `index.html`, `style.css`, and `script.js` live together in the repository root, and the asset references in the HTML are relative so they work on GitHub Pages project URLs. The workflow in `.github/workflows/pages.yml` deploys the root when changes are pushed to `main`.
+
+To enable publishing, open the repository's **Settings → Pages** and set the build and deployment source to **GitHub Actions**. After the workflow completes, GitHub Pages will serve the calculator at `https://<owner>.github.io/energy-everyday/`.
 
 ## Tariff calculation
 
@@ -17,6 +23,7 @@ Each rate applies only to the units in its band. The result covers energy charge
 
 ## Project files
 
-- `app.html` - Calculator page and input/output structure.
+- `index.html` - GitHub Pages homepage and calculator structure.
+- `app.html` - Alternate local calculator entry point.
 - `style.css` - Responsive layout and visual styling.
 - `script.js` - Tariff selection and charge calculation.
